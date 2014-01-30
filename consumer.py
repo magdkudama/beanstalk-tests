@@ -10,7 +10,7 @@ beanstalk = beanstalkc.Connection()
 beanstalk.watch('test-queue')
 beanstalk.ignore('default')
 
-def callback(sessionId):
+def callback(data):
     print "Working..."
 
 while True:
