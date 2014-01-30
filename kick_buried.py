@@ -4,8 +4,8 @@ import beanstalkc
 # Requirements: pip install beanstalkc && pip install pyyaml
 
 beanstalk = beanstalkc.Connection()
-beanstalk.watch('player-model.sessions')
-beanstalk.use('player-model.sessions')
+beanstalk.watch('test-queue')
+beanstalk.use('test-queue')
 beanstalk.ignore('default')
 
 beanstalk.kick()

@@ -7,7 +7,7 @@ def RESERVED():
     return "reserved"
 
 beanstalk = beanstalkc.Connection()
-beanstalk.watch('player-model.sessions')
+beanstalk.watch('test-queue')
 beanstalk.ignore('default')
 
 def callback(sessionId):
